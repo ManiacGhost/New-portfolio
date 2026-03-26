@@ -33,20 +33,19 @@ export default function Navbar() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'py-4 bg-black/60 backdrop-blur-xl border-b border-white/10 shadow-lg shadow-black/50' : 'py-6 bg-transparent'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'py-4 bg-black/60 backdrop-blur-xl border-b border-white/10 shadow-lg shadow-black/50' : 'py-6 bg-transparent'
+        }`}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 flex justify-between items-center">
         {/* Logo / Initials */}
-        <a 
-          href="#" 
+        <a
+          href="#"
           onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
           className="text-2xl font-black tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary hover:opacity-80 transition-opacity"
         >
           HP.
         </a>
-        
+
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
@@ -68,7 +67,7 @@ export default function Navbar() {
             Resume
           </a>
         </div>
-        
+
         {/* Mobile Navigation (Scrollable row) */}
         <div className="md:hidden flex items-center overflow-x-auto gap-4 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden py-2">
           {navItems.map((item) => (
