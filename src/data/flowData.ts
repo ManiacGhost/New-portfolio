@@ -25,6 +25,21 @@ const createNode = (id: string, label: string, x: number, y: number, type: strin
 });
 
 export const flowData: Record<string, { nodes: Node[], edges: Edge[] }> = {
+  "weatherwise-bot": {
+    nodes: [
+      createNode('1', 'IMD Data Sources (Scraped)', 250, 0, 'input'),
+      createNode('2', 'Data Processing Engine', 250, 100),
+      createNode('3', 'Rule-Based Alerting System', 250, 200),
+      createNode('4', 'Critical Zones Warning', 50, 300, 'output'),
+      createNode('5', 'React UI Dashboard', 450, 300, 'output'),
+    ],
+    edges: [
+      { id: 'e1-2', source: '1', target: '2', ...defaultEdgeOptions, label: 'Fetch Live Data' },
+      { id: 'e2-3', source: '2', target: '3', ...defaultEdgeOptions, label: 'Transform & Filter' },
+      { id: 'e3-4', source: '3', target: '4', ...defaultEdgeOptions, label: 'Trigger Alerts', style: { stroke: '#ef4444', strokeWidth: 2 } },
+      { id: 'e3-5', source: '3', target: '5', ...defaultEdgeOptions, label: 'Visually Render' },
+    ]
+  },
   "spring-batch": {
     nodes: [
       createNode('1', 'Data Source (Raw Files/CSV)', 250, 0, 'input'),

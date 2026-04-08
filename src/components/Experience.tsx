@@ -10,17 +10,17 @@ const experiences = [
     period: "2025 – Present",
     location: "Remote",
     metrics: [
-      { label: "Deployment", value: "Docker" },
+      { label: "Deployment", value: "AWS" },
       { label: "Security", value: "RBAC" }
     ],
     description: [
-      "Designed and deployed production-grade web applications and backend systems focusing on scalability and clean architecture.",
-      "Architected REST APIs, implemented authentication and database design, and optimized performance for real-world usage.",
-      "Implemented role-based access control (RBAC), input validation, and secure session management to ensure application security.",
-      "Containerized and deployed applications using Docker and managed hosting environments for reliable production delivery.",
-      "Live project: mediumblue-finch-130496.hostingersite.com"
+      "Designed and deployed enterprise-grade web applications integrating LLM APIs and automation workflows.",
+      "Built AI-powered features using prompt engineering, response parsing, and structured output handling.",
+      "Architected secure REST APIs with OAuth2, JWT, and RBAC, ensuring enterprise-level security standards.",
+      "Deployed and managed applications on AWS EC2, ensuring high availability and scalable backend services.",
+      "Utilized AWS S3 for secure file storage and media handling, implementing access control using IAM roles and bucket policies."
     ],
-    tech: ["REST APIs", "Docker", "RBAC", "Authentication"]
+    tech: ["AWS EC2/S3", "LLM APIs", "RBAC", "OAuth2"]
   },
   {
     company: "Effigo Global Pvt. Ltd.",
@@ -29,16 +29,16 @@ const experiences = [
     location: "Hyderabad",
     metrics: [
       { label: "Latency", value: "↓80%" },
-      { label: "Manual Steps", value: "↓50%" },
-      { label: "Refactoring", value: "40%+" }
+      { label: "Architecture", value: "Kafka" }
     ],
     description: [
-      "Developed scalable batch-processing pipelines using Spring Batch, reducing latency by 80%.",
-      "Engineered a dynamic workflow engine with role-based permissions, cutting manual steps by 50%.",
-      "Refactored 40-50% of legacy codebase using clean architecture principles.",
-      "Implemented Kafka-driven event pipelines for high-volume asynchronous processing."
+      "Developed scalable batch-processing pipelines using Spring Batch, enabling enterprise data workflows and reducing latency by 80%.",
+      "Built a workflow orchestration engine supporting multi-level approvals, aligning with enterprise process automation use cases.",
+      "Designed backend services following microservices and clean architecture principles, improving system scalability and maintainability.",
+      "Implemented event-driven architecture using Kafka for asynchronous enterprise integrations.",
+      "Optimized APIs and database layers ensuring high availability, performance, and reliability."
     ],
-    tech: ["Spring Boot", "Kafka", "PostgreSQL", "Java"]
+    tech: ["Spring Batch", "Kafka", "Microservices", "Java"]
   },
   {
     company: "AST Consulting Pvt. Ltd.",
@@ -46,15 +46,16 @@ const experiences = [
     period: "Jan 2024 – Aug 2024",
     location: "Noida",
     metrics: [
-      { label: "Automation", value: "100%" }
+      { label: "AI Backend", value: "Gemini" }
     ],
     description: [
-      "Built scalable REST APIs with NestJS and responsive React.js interfaces.",
-      "Created an AI-powered curriculum generator using Gemini APIs, automating 100% of content preparation.",
-      "Designed a high-performance SMS routing engine with provider auto-switching for high reliability.",
-      "Integrated Node.js microservices with MongoDB and Redis for fast data retrieval."
+      "Developed an AI-powered curriculum generator using LLM APIs (Gemini), implementing prompt engineering, structured outputs, and response validation.",
+      "Built backend services using Node.js microservices with MongoDB and Redis for scalable data handling.",
+      "Worked with AWS S3 and IAM to manage storage, access permissions, and secure handling of generated AI content.",
+      "Integrated multiple REST APIs and designed modular services for extensibility and maintainability.",
+      "Designed systems aligned with RAG-style architectures for dynamic content generation."
     ],
-    tech: ["NestJS", "React.js", "Node.js", "MongoDB", "Redis", "Gemini API"]
+    tech: ["Node.js", "MongoDB", "AWS S3", "Gemini API", "RAG"]
   }
 ];
 

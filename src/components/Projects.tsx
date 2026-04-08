@@ -6,11 +6,27 @@ import { FiGithub as Github, FiExternalLink as ExternalLink, FiActivity as Activ
 const projects = [
   {
     id: "spring-batch",
-    title: "High-Performance Spring Batch Processing",
-    description: "High-performance chunk-based processing for large-scale data migration, optimized for reliability and fault tolerance.",
-    tech: ["Spring Boot 3", "Spring Batch", "PostgreSQL", "Java"],
+    title: "High-Performance Batch Processing API",
+    description: "Designed a chunk-oriented batch processing system to ingest large-scale JSON datasets. Leveraged Spring Batch architecture with transactional chunking to ensure fault tolerance and optimized database writes using batch operations.",
+    tech: ["Spring Boot", "Spring Batch", "PostgreSQL"],
     github: "https://github.com/ManiacGhost/SpringBatch-Chunk-based-processing-and-PostGreSQL-connectivity",
-    metrics: "Reduced latency by 80%"
+    metrics: "Fault Tolerant"
+  },
+  {
+    id: "weatherwise-bot",
+    title: "WeatherWise Bot - Real-Time Weather Monitoring",
+    description: "Developed a real-time intelligence system scraping IMD data sources. Implemented a rule-based alerting engine to trigger severe alerts and built a responsive dashboard, separating scraping from processing for high scalability.",
+    tech: ["TypeScript", "JavaScript", "React"],
+    github: "", 
+    metrics: "Real-Time Alerts"
+  },
+  {
+    id: "appraisal",
+    title: "Automated Faculty Appraisal System",
+    description: "Built a digital appraisal system with automated API-score calculation, efficiently cutting manual evaluation time by 60%.",
+    tech: ["React.js", "Node.js", "Django"],
+    github: "",
+    metrics: "60% Time Saved"
   },
   {
     id: "sms-engine",
@@ -26,13 +42,6 @@ const projects = [
     description: "Leveraged Gemini APIs to automate lesson creation, eliminating 100% of manual content preparation.",
     tech: ["React.js", "NestJS", "Gemini API"],
     metrics: "100% Automation"
-  },
-  {
-    id: "appraisal",
-    title: "Automated Faculty Appraisal System",
-    description: "Digital appraisal system with automated API-score calculation, reducing manual evaluation time.",
-    tech: ["React.js", "Node.js", "Django"],
-    metrics: "60% Time Saved"
   }
 ];
 
@@ -54,7 +63,7 @@ export default function Projects() {
         </p>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="flex flex-wrap justify-center gap-8">
         {projects.map((proj, idx) => (
           <motion.div
             key={proj.id}
@@ -62,7 +71,7 @@ export default function Projects() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: idx * 0.1 }}
-            className="glass rounded-2xl flex flex-col group overflow-hidden border border-white/10 hover:border-secondary/50 transition-all duration-300"
+            className="w-full md:w-[calc(50%-1rem)] glass rounded-2xl flex flex-col group overflow-hidden border border-white/10 hover:border-secondary/50 transition-all duration-300"
           >
             <div className="p-8 flex-grow">
               <div className="flex justify-between items-start mb-6 w-full">

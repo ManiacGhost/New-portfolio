@@ -37,7 +37,7 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed"
         >
-          2 years of experience building scalable applications, optimizing systems, and crafting exceptional digital experiences. Specialized in <strong>Java</strong>, <strong>Spring Boot</strong>, and <strong>React</strong> architectures.
+          Full-Stack Engineer with experience building enterprise-grade backend systems, AI-powered applications, and scalable microservices. Specialized in <strong>Java</strong>, <strong>Spring Boot</strong>, <strong>Python</strong>, and <strong>LLM integrations</strong>.
         </motion.p>
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
