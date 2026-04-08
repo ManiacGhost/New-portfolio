@@ -2,14 +2,21 @@ import { motion } from 'framer-motion';
 import { FiX as X } from 'react-icons/fi';
 import ReactFlow, { Background, Controls } from 'reactflow';
 import 'reactflow/dist/style.css';
+import { useEffect } from 'react';
 import { flowData } from '../data/flowData';
-
 interface ProjectModalProps {
   projectId: string;
   onClose: () => void;
 }
 
 export default function ProjectModal({ projectId, onClose }: ProjectModalProps) {
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, []);
+
   const data = flowData[projectId];
 
   if (!data) return null;

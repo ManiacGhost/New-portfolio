@@ -40,7 +40,8 @@ export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<string | null>(null);
 
   return (
-    <section className="py-24 px-4 max-w-6xl mx-auto relative z-10" id="projects">
+    <>
+      <section className="py-24 px-4 max-w-6xl mx-auto relative z-10" id="projects">
       <motion.div 
         initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
         className="mb-16 text-center"
@@ -99,6 +100,8 @@ export default function Projects() {
         ))}
       </div>
 
+      </section>
+
       <AnimatePresence>
         {selectedProject && (
           <ProjectModal 
@@ -107,6 +110,6 @@ export default function Projects() {
           />
         )}
       </AnimatePresence>
-    </section>
+    </>
   );
 }
